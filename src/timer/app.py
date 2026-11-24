@@ -26,7 +26,7 @@ console = Console()
 def start(minutes: int):
     """Starts a timer for the specified number of minutes."""
     console.print(f"Starting timer for {minutes} minutes")
-    for i in track(range(minutes*60), description="Counting down..."):
+    for _i in track(range(minutes*60), description="Counting down..."):
         time.sleep(1)
     sound_resource = files("timer").joinpath("res", "alarm.mp3")
     with as_file(sound_resource) as sound_path:
