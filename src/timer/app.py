@@ -1,9 +1,10 @@
-import typer
 import time
+from importlib.resources import as_file, files
+
+import typer
+from playsound3 import playsound
 from rich.console import Console
 from rich.progress import track
-from importlib.resources import as_file, files
-from playsound3 import playsound
 
 app = typer.Typer()
 console = Console()
@@ -18,5 +19,5 @@ def start(minutes: int):
     sound_resource = files("timer").joinpath("res", "alarm.mp3")
     with as_file(sound_resource) as sound_path:
         sound = playsound(sound_path, block=False)
-    console.print(f"Stop", style="bold red")
+    console.print("Stop", style="bold red")
     sound.wait()
