@@ -7,10 +7,13 @@ authors = [
     { name = "Luiz Gavioli", email = "428691+luizbag@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "playsound3>=3.3.2",
+    "typer>=0.29.2",
+]
 
 [project.scripts]
-timer = "timer:main"
+timer = "timer.app:app"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
