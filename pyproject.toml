@@ -1,16 +1,34 @@
 [project]
 name = "timer"
 version = "0.1.0"
-description = "A simple timer application"
+description = "A lightweight command-line countdown timer with a Rich progress bar and audio alert"
 readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
 authors = [
     { name = "Luiz Gavioli", email = "428691+luizbag@users.noreply.github.com" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
 ]
 requires-python = ">=3.12"
 dependencies = [
     "playsound3>=3.3.2",
     "typer>=0.29.2",
 ]
+
+[project.urls]
+Homepage = "https://github.com/luizbag/timer"
+Repository = "https://github.com/luizbag/timer"
+Issues = "https://github.com/luizbag/timer/issues"
 
 [project.scripts]
 timer = "timer.app:app"
@@ -24,3 +42,10 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.6",
 ]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
