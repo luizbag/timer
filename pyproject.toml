@@ -1,7 +1,7 @@
 [project]
 name = "timer"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simple timer application"
 readme = "README.md"
 authors = [
     { name = "Luiz Gavioli", email = "428691+luizbag@users.noreply.github.com" }
